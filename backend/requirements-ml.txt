@@ -1,0 +1,4 @@
+# Heavy AI dependencies. The API runs without them; detection endpoints answer 503 until installed.
+-r requirements.txt
+ultralytics>=8.3
+torch>=2.2

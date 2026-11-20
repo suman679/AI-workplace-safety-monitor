@@ -1,0 +1,13 @@
+# Dataset layout expected by train.py:
+#   dataset/images/train, dataset/images/val   (jpg/png)
+#   dataset/labels/train, dataset/labels/val   (YOLO txt, one per image)
+path: .
+train: images/train
+val: images/val
+names:
+  0: person
+  1: helmet
+  2: vest
+  3: gloves
+  4: safety_shoes
+  5: mask
