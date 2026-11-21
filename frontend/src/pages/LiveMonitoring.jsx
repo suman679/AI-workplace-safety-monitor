@@ -6,7 +6,8 @@ import useFetch from "../hooks/useFetch";
 import usePermissions from "../hooks/usePermissions";
 import { tokenStore } from "../services/api";
 
-const WS_BASE = import.meta.env.VITE_API_URL.replace(/^http/, "ws");
+const API_BASE = import.meta.env.VITE_API_URL || "https://ai-workplace-safety-monitor.onrender.com";
+const WS_BASE = API_BASE.replace(/^http/, "ws");
 const COLORS = { SAFE: "#34d399", WARNING: "#fbbf24", VIOLATION: "#f87171" };
 const CLOSE_MESSAGES = { 4401: "Authentication expired. Please log in again.", 4403: "Your role cannot run live monitoring.", 4404: "Site or camera not found.", 1011: "Live detection failed." };
 
@@ -179,4 +180,6 @@ export default function LiveMonitoring() {
     </div>
   );
 }
+
+
 
